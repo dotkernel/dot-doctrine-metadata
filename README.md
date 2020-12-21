@@ -9,3 +9,4 @@ Provides metadata and strategies for extracting and rendering Doctrine entities
 https://github.com/mezzio/mezzio-hal/pull/8
 
 Implement changes from this fork in a separate package
+https://github.com/dotkernel/mezzio-hal
