@@ -40,10 +40,8 @@ class DoctrineMetadataMapFactory
             if (! is_array($metadata)) {
                 throw InvalidConfigException::dueToNonArrayMetadata($metadata);
             }
-
             $this->injectMetadata($metadataMap, $metadata, $metadataFactories);
         }
-
         return $metadataMap;
     }
 
