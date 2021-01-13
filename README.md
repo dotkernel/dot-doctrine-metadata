@@ -1,4 +1,4 @@
-# doctrine-metadata
+# dot-doctrine-metadata
 Provides metadata and strategies for extracting and rendering Doctrine entities
 
 ### Requirements
