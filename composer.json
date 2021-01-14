@@ -1,7 +1,7 @@
 {
   "name": "dotkernel/dot-doctrine-metadata",
   "type": "library",
-  "description": "DotKernel wrapper that sits on top of mezzio-hal package and resolves the doctrine proxy issues. ",
+  "description": "DotKernel wrapper that sits on top of mezzio-hal package and resolves the doctrine proxy issues.",
   "license": "MIT",
   "homepage": "https://github.com/dotkernel/dot-doctrine-metadata",
   "authors": [
@@ -24,8 +24,7 @@
   ],
   "require": {
     "php": "^7.4",
-    "mezzio/mezzio-hal": "^2.0",
-    "doctrine/orm": "^2.8"
+    "mezzio/mezzio-hal": "^2.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.1",
