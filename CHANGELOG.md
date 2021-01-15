@@ -1,3 +1,39 @@
+## 3.0.4 - 2021-01-15
+
+### Changed
+* README.md
+* CHANGELOG.md
+
+### Added
+* Nothing
+
+### Deprecated
+* Nothing
+
+### Removed
+* Nothing
+
+### Fixed
+* Nothing
+
+## 3.0.3 - 2021-01-14
+
+### Changed
+* README.md
+* CHANGELOG.md
+
+### Added
+* Nothing
+
+### Deprecated
+* Nothing
+
+### Removed
+* Nothing
+
+### Fixed
+* Nothing
+
 ## 3.0.2-dev - 2021-01-14
 
 ### Changed
