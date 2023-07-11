@@ -1,8 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace Dot\DoctrineMetadata\Factory;
-
 
 use Dot\DoctrineMetadata\Metadata\DoctrineMetadataMap;
 use Mezzio\Hal\Metadata\AbstractMetadata;
@@ -11,19 +11,28 @@ use Mezzio\Hal\Metadata\MetadataFactoryInterface;
 use Mezzio\Hal\Metadata\MetadataMap;
 use Psr\Container\ContainerInterface;
 
+use function array_pop;
+use function class_exists;
+use function class_implements;
+use function class_parents;
+use function explode;
+use function in_array;
+use function is_array;
+use function method_exists;
+use function sprintf;
+
 class DoctrineMetadataMapFactory
 {
     public function __invoke(ContainerInterface $container): MetadataMap
     {
         $config            = $container->has('config') ? $container->get('config') : [];
-        $metadataMapConfig = $config[MetadataMap::class] ?? [];
+        $metadataMapConfig = $config[MetadataMap::class] ?? null;
 
         if (! is_array($metadataMapConfig)) {
             throw InvalidConfigException::dueToNonArray($metadataMapConfig);
         }
 
         $metadataFactories = $config['mezzio-hal']['metadata-factories'] ?? [];
-
         return $this->populateMetadataMapFromConfig(
             new DoctrineMetadataMap(),
             $metadataMapConfig,
@@ -31,7 +40,7 @@ class DoctrineMetadataMapFactory
         );
     }
 
-    private function populateMetadataMapFromConfig(
+    public function populateMetadataMapFromConfig(
         MetadataMap $metadataMap,
         array $metadataMapConfig,
         array $metadataFactories
@@ -45,7 +54,7 @@ class DoctrineMetadataMapFactory
         return $metadataMap;
     }
 
-    private function injectMetadata(MetadataMap $metadataMap, array $metadata, array $metadataFactories): void
+    public function injectMetadata(MetadataMap $metadataMap, array $metadata, array $metadataFactories): void
     {
         if (! isset($metadata['__class__'])) {
             throw InvalidConfigException::dueToMissingMetadataClass();
@@ -80,12 +89,9 @@ class DoctrineMetadataMapFactory
     /**
      * Uses the registered factory class to create the metadata instance.
      *
-     * @param string $metadataClass
      * @param array $metadata
-     * @param string $factoryClass
-     * @return AbstractMetadata
      */
-    private function createMetadataViaFactoryClass(
+    public function createMetadataViaFactoryClass(
         string $metadataClass,
         array $metadata,
         string $factoryClass
@@ -104,11 +110,9 @@ class DoctrineMetadataMapFactory
      *
      * This function is to ensure backwards compatibility with versions prior to 0.6.0.
      *
-     * @param string $metadataClass
      * @param array $metadata
-     * @return AbstractMetadata
      */
-    private function createMetadataViaFactoryMethod(string $metadataClass, array $metadata): AbstractMetadata
+    public function createMetadataViaFactoryMethod(string $metadataClass, array $metadata): AbstractMetadata
     {
         $normalizedClass = $this->stripNamespaceFromClass($metadataClass);
         $method          = sprintf('create%s', $normalizedClass);
@@ -120,11 +124,7 @@ class DoctrineMetadataMapFactory
         return $this->$method($metadata);
     }
 
-    /**
-     * @param string $class
-     * @return string
-     */
-    private function stripNamespaceFromClass(string $class): string
+    public function stripNamespaceFromClass(string $class): string
     {
         $segments = explode('\\', $class);
         return array_pop($segments);

@@ -12,7 +12,7 @@ Provides metadata and strategies for extracting and rendering Doctrine entities.
 This package is a wrapper for `mezzio/mezzio-hal` which addresses the doctrine entity proxy metadata issue when using `mezzio/mezzio-hal` to generate HAL responses.
 
 ### Requirements
-- PHP >= 7.4
+- PHP >= 8.1
 - mezzio/mezzio-hal >= ^2.4
 
 ### Installation
