@@ -11,7 +11,8 @@ use Mezzio\Hal\Metadata\MetadataMap;
 class DoctrineMetadataMap extends MetadataMap
 {
     /**
-     * Overwrites the $class namespace, ensuring it will always be a real class namespace, not a proxy representation.
+     * Checks if the given $class namespace exists in the metadata,
+     * ensuring it will always be a real class namespace, not a proxy representation.
      */
     public function has(string $class): bool
     {
@@ -20,7 +21,8 @@ class DoctrineMetadataMap extends MetadataMap
     }
 
     /**
-     * Overwrites the $class namespace, ensuring it will always be a real class namespace, not a proxy representation.
+     * Retrieves the metadata for the given $class namespace,
+     * ensuring it will always be a real class namespace, not a proxy representation.
      */
     public function get(string $class): AbstractMetadata
     {

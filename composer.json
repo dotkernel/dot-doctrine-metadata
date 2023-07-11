@@ -32,6 +32,11 @@
     "laminas/laminas-coding-standard": "^2.5",
     "vimeo/psalm": "^5.13"
   },
+  "autoload-dev": {
+    "psr-4": {
+      "DotTest\\DoctrineMetadata\\": "test/"
+    }
+  },
   "autoload": {
     "psr-4": {
       "Dot\\DoctrineMetadata\\": "src"
@@ -51,6 +56,7 @@
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
-    }
+    },
+    "sort-packages": true
   }
 }

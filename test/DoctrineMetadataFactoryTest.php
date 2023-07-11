@@ -10,19 +10,18 @@ use Mezzio\Hal\Metadata\MetadataMap;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
-class DoctrineMetadataTest extends TestCase
+class DoctrineMetadataFactoryTest extends TestCase
 {
     private DoctrineMetadataMapFactory $doctrineMetadataMapFactory;
     private ContainerInterface $container;
 
     public function setUp(): void
     {
-        parent::setUp();
         $this->doctrineMetadataMapFactory = new DoctrineMetadataMapFactory();
         $this->container                  = $this->createMock(ContainerInterface::class);
     }
 
-    public function testStripNamespaceFromClass()
+    public function testStripNamespaceFromClass(): void
     {
         $factory            = $this->doctrineMetadataMapFactory;
         $classWithNamespace = 'Dot\DotTest\DoctrineMetadata';
@@ -31,7 +30,7 @@ class DoctrineMetadataTest extends TestCase
         $this->assertSame($expectedResult, $actualResult);
     }
 
-    public function testInvokeReturnsMetadataMap()
+    public function testInvokeReturnsMetadataMap(): void
     {
         $config = [
             MetadataMap::class => [],
@@ -52,7 +51,7 @@ class DoctrineMetadataTest extends TestCase
         $this->assertInstanceOf(MetadataMap::class, $result);
     }
 
-    public function testInvokeThrowsExceptionForNonArrayMetadataMapConfig()
+    public function testInvokeThrowsExceptionForNonArrayMetadataMapConfig(): void
     {
         $this->container->expects($this->once())
             ->method('has')
@@ -66,7 +65,7 @@ class DoctrineMetadataTest extends TestCase
         ($this->doctrineMetadataMapFactory)($this->container);
     }
 
-    public function testPopulateMetadataMapFromConfig()
+    public function testPopulateMetadataMapFromConfig(): void
     {
         $factory           = $this->doctrineMetadataMapFactory;
         $metadataMap       = new MetadataMap();
@@ -80,7 +79,7 @@ class DoctrineMetadataTest extends TestCase
         $this->assertInstanceOf(MetadataMap::class, $result);
     }
 
-    public function testInjectMetadataWithNonMetadataClass()
+    public function testInjectMetadataWithNonMetadataClass(): void
     {
         $factory           = $this->doctrineMetadataMapFactory;
         $metadataMap       = new MetadataMap();
