@@ -1,12 +1,16 @@
 # dot-doctrine-metadata
 
 ![OSS Lifecycle](https://img.shields.io/osslifecycle/dotkernel/dot-doctrine-metadata)
-![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-doctrine-metadata/3.1.0)
+![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-doctrine-metadata/3.2.0)
 
 [![GitHub issues](https://img.shields.io/github/issues/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/issues)
 [![GitHub forks](https://img.shields.io/github/forks/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/network)
 [![GitHub stars](https://img.shields.io/github/stars/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/stargazers)
 [![GitHub license](https://img.shields.io/github/license/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/blob/3.0/LICENSE)
+
+[![Build Static](https://github.com/dotkernel/dot-doctrine-metadata/actions/workflows/static-analysis.yml/badge.svg?branch=3.0)](https://github.com/dotkernel/dot-doctrine-metadata/actions/workflows/static-analysis.yml)
+
+[![SymfonyInsight](https://insight.symfony.com/projects/e76bb03b-b630-4a3e-9a24-b6a04cee7210/big.svg)](https://insight.symfony.com/projects/e76bb03b-b630-4a3e-9a24-b6a04cee7210)
 
 Provides metadata and strategies for extracting and rendering Doctrine entities.
 This package is a wrapper for `mezzio/mezzio-hal` which addresses the doctrine entity proxy metadata issue when using `mezzio/mezzio-hal` to generate HAL responses.
