@@ -39,7 +39,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Dot\\DoctrineMetadata\\": "src"
+      "Dot\\DoctrineMetadata\\": "src/"
     }
   },
   "scripts": {
