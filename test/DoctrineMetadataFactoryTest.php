@@ -7,14 +7,19 @@ namespace DotTest\DoctrineMetadata;
 use Dot\DoctrineMetadata\Factory\DoctrineMetadataMapFactory;
 use Mezzio\Hal\Metadata\Exception\InvalidConfigException;
 use Mezzio\Hal\Metadata\MetadataMap;
+use PHPUnit\Framework\MockObject\Exception;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 class DoctrineMetadataFactoryTest extends TestCase
 {
     private DoctrineMetadataMapFactory $doctrineMetadataMapFactory;
-    private ContainerInterface $container;
+    private ContainerInterface|MockObject $container;
 
+    /**
+     * @throws Exception
+     */
     public function setUp(): void
     {
         $this->doctrineMetadataMapFactory = new DoctrineMetadataMapFactory();
