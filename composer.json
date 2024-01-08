@@ -23,8 +23,8 @@
     "mezzio-hal"
   ],
   "require": {
-    "php": "~8.1.0 || ~8.2.0",
-    "mezzio/mezzio-hal": "^2.4.0",
+    "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+    "mezzio/mezzio-hal": "^2.9.0",
     "doctrine/common": "^3.4"
   },
   "require-dev": {
