@@ -1,7 +1,7 @@
 # dot-doctrine-metadata
 
 ![OSS Lifecycle](https://img.shields.io/osslifecycle/dotkernel/dot-doctrine-metadata)
-![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-doctrine-metadata/3.2.1)
+![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-doctrine-metadata/3.2.2)
 
 [![GitHub issues](https://img.shields.io/github/issues/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/issues)
 [![GitHub forks](https://img.shields.io/github/forks/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/network)
