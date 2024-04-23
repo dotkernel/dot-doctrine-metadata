@@ -8,7 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/stargazers)
 [![GitHub license](https://img.shields.io/github/license/dotkernel/dot-doctrine-metadata)](https://github.com/dotkernel/dot-doctrine-metadata/blob/3.0/LICENSE)
 
-[![Build Static](https://github.com/dotkernel/dot-doctrine-metadata/actions/workflows/static-analysis.yml/badge.svg?branch=3.0)](https://github.com/dotkernel/dot-doctrine-metadata/actions/workflows/static-analysis.yml)
+[![Build Static](https://github.com/dotkernel/dot-doctrine-metadata/actions/workflows/continuous-integration.yml/badge.svg?branch=3.0)](https://github.com/dotkernel/dot-doctrine-metadata/actions/workflows/continuous-integration.yml)
 [![codecov](https://codecov.io/gh/dotkernel/dot-doctrine-metadata/graph/badge.svg?token=ZGR8LJGZV5)](https://codecov.io/gh/dotkernel/dot-doctrine-metadata)
 
 [![SymfonyInsight](https://insight.symfony.com/projects/e76bb03b-b630-4a3e-9a24-b6a04cee7210/big.svg)](https://insight.symfony.com/projects/e76bb03b-b630-4a3e-9a24-b6a04cee7210)
@@ -16,11 +16,11 @@
 Provides metadata and strategies for extracting and rendering Doctrine entities.
 This package is a wrapper for `mezzio/mezzio-hal` which addresses the doctrine entity proxy metadata issue when using `mezzio/mezzio-hal` to generate HAL responses.
 
-### Requirements
+# Requirements
 - PHP >= 8.1
 - mezzio/mezzio-hal >= ^2.4
 
-### Installation
+# Installation
 
 Run the following command in your project root directory
 
@@ -34,7 +34,7 @@ Next, register the package's `ConfigProvider` to your application config.
 
 Note : Make sure to register the package in the `// DK packages` section.
 
-### Migrating from previous integrations
+# Migrating from previous integrations
 
 To migrate from previous integrations please follow the below steps, in order:
 
