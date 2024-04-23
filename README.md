@@ -23,15 +23,13 @@ This package is a wrapper for `mezzio/mezzio-hal` which addresses the doctrine e
 
 ## Installation
 
-Run the following command in your project root directory
+Run the following command in your project root directory:
 
-```
-$ composer require dotkernel/dot-doctrine-metadata
-``` 
+      composer require dotkernel/dot-doctrine-metadata
 
-Next, register the package's `ConfigProvider` to your application config.
+Next, register the package's `ConfigProvider` to your application config:
 
-``Dot\DoctrineMetadata\ConfigProvider::class,``
+      Dot\DoctrineMetadata\ConfigProvider::class,
 
 Note : Make sure to register the package in the `// DK packages` section.
 
@@ -50,8 +48,6 @@ To migrate from previous integrations please follow the below steps, in order:
 
 - Remove "`mezzio/mezzio-hal`" package from composer.json
 - Delete composer.lock
-- Run ```
-      $ composer require dotkernel/dot-doctrine-metadata
-      ``` 
+- Run `composer require dotkernel/dot-doctrine-metadata`
 - Register the package’s `ConfigProvider` in `/config/config.php` in the `//DK Packages` section 
-``Dot\DoctrineMetadata\ConfigProvider::class,``
+`Dot\DoctrineMetadata\ConfigProvider::class,`

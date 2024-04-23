@@ -15,9 +15,7 @@ To migrate from previous integrations please follow the below steps, in order:
 - Delete composer.lock
 - Run below command:
 
-```
-  composer require dotkernel/dot-doctrine-metadata
-```
+      composer require dotkernel/dot-doctrine-metadata
 
 - Register the package’s `ConfigProvider` in `/config/config.php` in the `//DK Packages` section
   `Dot\DoctrineMetadata\ConfigProvider::class,`
