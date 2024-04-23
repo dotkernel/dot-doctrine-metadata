@@ -20,4 +20,4 @@ To migrate from previous integrations please follow the below steps, in order:
 ```
 
 - Register the package’s `ConfigProvider` in `/config/config.php` in the `//DK Packages` section
-  ``Dot\DoctrineMetadata\ConfigProvider::class,``
+  `Dot\DoctrineMetadata\ConfigProvider::class,`
