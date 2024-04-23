@@ -16,11 +16,12 @@
 Provides metadata and strategies for extracting and rendering Doctrine entities.
 This package is a wrapper for `mezzio/mezzio-hal` which addresses the doctrine entity proxy metadata issue when using `mezzio/mezzio-hal` to generate HAL responses.
 
-# Requirements
+## Requirements
+
 - PHP >= 8.1
 - mezzio/mezzio-hal >= ^2.4
 
-# Installation
+## Installation
 
 Run the following command in your project root directory
 
@@ -34,11 +35,12 @@ Next, register the package's `ConfigProvider` to your application config.
 
 Note : Make sure to register the package in the `// DK packages` section.
 
-# Migrating from previous integrations
+## Migrating from previous integrations
 
 To migrate from previous integrations please follow the below steps, in order:
 
 - Remove the previous fork from composer.json at the `repositories` key :
+
 ```$xslt
 {   
     "type": "vcs",
