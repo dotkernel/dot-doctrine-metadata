@@ -1,9 +1,15 @@
 # dot-doctrine-metadata
 
+> [!IMPORTANT]
+> dot-doctrine-metadata is a wrapper on top of [mezzio/mezzio-hal](https://github.com/mezzio/mezzio-hal)
+>
+> ![OSS Lifecycle](https://img.shields.io/osslifecycle/mezzio/mezzio-hal)
+
 > [!CAUTION]
 > ## Security-Only Maintenance Mode
 > This package is in maintenance mode and will not receive further updates because the main issue was fixed by mezzio.
 
+## dot-doctrine-metadata badges
 
 ![OSS Lifecycle](https://img.shields.io/osslifecycle/dotkernel/dot-doctrine-metadata)
 ![PHP from Packagist (specify version)](https://img.shields.io/packagist/php-v/dotkernel/dot-doctrine-metadata/3.2.2)
