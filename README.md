@@ -4,9 +4,9 @@
 > dot-doctrine-metadata is a wrapper on top of [mezzio/mezzio-hal](https://github.com/mezzio/mezzio-hal)
 
 > [!CAUTION]
-> 
+>
 > ## Security-Only Maintenance Mode
-> 
+>
 > This package is in maintenance mode and will not receive further updates because the main issue was fixed by mezzio.
 
 ## dot-doctrine-metadata badges
@@ -23,7 +23,6 @@
 [![codecov](https://codecov.io/gh/dotkernel/dot-doctrine-metadata/graph/badge.svg?token=ZGR8LJGZV5)](https://codecov.io/gh/dotkernel/dot-doctrine-metadata)
 
 [![SymfonyInsight](https://insight.symfony.com/projects/e76bb03b-b630-4a3e-9a24-b6a04cee7210/big.svg)](https://insight.symfony.com/projects/e76bb03b-b630-4a3e-9a24-b6a04cee7210)
-
 
 Provides metadata and strategies for extracting and rendering Doctrine entities.
 This package is a wrapper for `mezzio/mezzio-hal` which addresses the doctrine entity proxy metadata issue when using `mezzio/mezzio-hal` to generate HAL responses.
