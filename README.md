@@ -2,8 +2,6 @@
 
 > [!IMPORTANT]
 > dot-doctrine-metadata is a wrapper on top of [mezzio/mezzio-hal](https://github.com/mezzio/mezzio-hal)
->
-> ![OSS Lifecycle](https://img.shields.io/osslifecycle/mezzio/mezzio-hal)
 
 > [!CAUTION]
 > ## Security-Only Maintenance Mode
